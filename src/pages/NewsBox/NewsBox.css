@@ -1,0 +1,31 @@
+.boxNews{
+    /* max-width:400px; */
+    /* width: 20%; */
+height: 350px;
+border: 1px solid black;
+   border-radius: 10px;
+}
+.boxNews>img{
+    border-radius: 10px;
+    width: 250px;
+    height: 100%;
+}
+.txtOnimage{
+    background-color: transparent;
+    position: relative;
+    bottom: 65%;
+    line-height: 20px;
+    padding: 10px;
+    color: white;
+}
+.txttoimgtop{
+    background-color: transparent;
+    position: relative;
+    bottom: 97%;
+    padding: 10px;
+    color: white; 
+}
+.txtOnimage>span{
+    color: rgb(211, 209, 209);
+    font-size: 14px;
+}

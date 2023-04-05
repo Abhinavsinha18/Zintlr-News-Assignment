@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { useRef } from 'react';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import NewsBody from './Components/NewsBody/NewsBody';
+import SideNews from './Components/SideNews/SideNews';
 
 function App() {
+
+  let box = useRef(null)
+
+
+const showNews = ()=>{
+  if(box.current.style.display == "none"){
+
+    box.current.style.display = "block"
+  }else{
+    box.current.style.display = "none"
+  }
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <Navbar/>
+  {/* <div className='break'> */}
+  <NewsBody/>
+{/* <SideNews/> */}
+ 
+<div className='divBtm' ref={box}>
+  <SideNews showNews={showNews}/>
+  {/* <div className='bg'></div> */}
+</div>
+
+<div className='btn'>
+  <button onClick={showNews}>Explore</button>
+</div>
     </div>
   );
 }

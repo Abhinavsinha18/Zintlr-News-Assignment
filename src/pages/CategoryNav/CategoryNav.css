@@ -1,0 +1,27 @@
+.scndNav{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.scndNav::-webkit-scrollbar{
+    display: none;
+}
+.scndNav>p{
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+     padding-left: 15px;
+    padding-right: 15px; 
+}
+.scdNavDiv>h3{
+ font-weight: 500;
+ padding-left: 10px;
+}
+.scndNav>p:first-child{
+    color: rgb(255, 93, 120);
+}
